@@ -45,3 +45,37 @@ while checkStatus:
     else:
         print(teta[0], teta[1], teta[2], teta[3])
         checkStatus = False
+        
+#Подвиг 7. Вводятся две строки (каждая с новой строчки).
+#Из первой строки выделить все символы с четными индексами,а из
+#второй - с нечетными. Объединить строки через пробел и вывести на экран.
+
+#Sample Input:
+#Hello
+#Python
+#Sample Output: Hlo yhn
+
+
+def getTwoWords():
+    str1 = input("input a first word >>> ")
+    str2 = input("input a second word >>> ")
+
+    arr1 = []
+    arr2 = []
+
+    for i in range(len(str1)):
+        if i % 2 == 0:
+            arr1.append(str1[i])
+        else:
+            pass
+
+    for j in range(len(str2)):
+        if j % 2 != 0:
+            arr2.append(str2[j])
+        else:
+            pass
+
+    return "".join(arr1) + "".join(arr2)
+
+print(getTwoWords())
+
