@@ -32,7 +32,7 @@ Sample Output: 8(912)1234567
 phone = input("input phone >>> ")
 phone_list = list(phone)
 phone_list.pop(0)
-phone_list[1] = "8"
+phone_list[0] = "8"
 
 for i in phone_list:
     if i == "-":
@@ -51,8 +51,8 @@ Sample Input: Сергей Михайлович Балакирев
 Sample Output: Балакирев С.М.
 """
 
-one, two, three = input("input name, name2, name3 >>> ").split("  ")
-print(f"{three} {one[0]}. {two[0]}.")
+one, two, three = input("input name, name2, name3 >>> ").split()
+print(f"{three.upper()} {one[0].upper()}. {two[0].upper()}.")
 
 """
 3.8 Методы списков
@@ -65,7 +65,7 @@ Sample Input: 8 11 -5 10 -1 0 7
 Sample Output: -5 -1 0
 """
 
-numbers = list(map(int(input("input numbers >>>")).split("  ")))
+numbers = list(map(int, input("input numbers >>> ").split()))
 numbers.sort()
 print(numbers[:3])
 
@@ -82,7 +82,7 @@ Sample Input: 8 11 0 3 5 6
 Sample Output: 8 11 0 3 5 False
 """
 
-lst = list(map(int(input("input numbers again >>> "))))
+lst = list(map(int, input("input numbers >>> ").split()))
 
 if lst[-1] % 2 != 0:
     lst.pop(-1)
@@ -103,8 +103,8 @@ Sample Input: Лена Обь Волга Дон Енисей
 Sample Output: Дон Енисей Лена Обь
 """
 
-rivers = input("input rivers >>> ").split("  ")
+rivers = input("input rivers >>> ").split()
 rivers.sort()
 rivers.pop(0)
 
-print("".join(rivers))
+print(rivers)
