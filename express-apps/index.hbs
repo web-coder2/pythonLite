@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>handlebar index page</title>
+</head>
+<body style="background-color: black; color: yellow;">
+	<h4>information about user</h4>
+	<strong>name = {{ user }}</strong>
+	<i>role = {{ role }}</i>
+	<ul>
+  		{{#each lps}}
+  			<li>{{this}}</li>
+  		{{/each}}
+	</ul>
+</body>
+</html>
